@@ -14,3 +14,7 @@ class Conta:
 
     def deposita(self, valor):
         self.saldo += valor
+
+    def transfere(self, valor, destino):
+        self.saca(valor)
+        destino.deposita(valor)
